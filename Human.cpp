@@ -1,13 +1,14 @@
 #include "Human.h"
 #include <iostream>
+#include <string>
 Human::Human(std::string name){
     this->name = name;
 }
-char Human::makeMove() {
-    char move;
+Move* Human::makeMove() {
+    std::string move;
     std::cout<<"Enter move: ";
     std::cin>>move;
-    return move;
+    return &move;
 }
 
 std::string Human::getName() {

@@ -8,7 +8,7 @@ class Human : public Player {
         std::string name;
     public:
     Human(std::string name = "Human");
-    char makeMove() override;
+    Move* makeMove() override;
     std::string getName() override;
 };
 #endif
