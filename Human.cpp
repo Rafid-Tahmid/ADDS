@@ -1,16 +1,16 @@
 #include "Human.h"
+#include "moveCreate.h"
 #include <iostream>
-#include <string>
-Human::Human(std::string name){
-    this->name = name;
-}
+
+Human::Human(const std::string& name) : name(name) {}
+
 Move* Human::makeMove() {
-    std::string move;
-    std::cout<<"Enter move: ";
-    std::cin>>move;
-    return &move;
+    std::string moveName;
+    std::cout << "Enter Move: ";
+    std::cin >> moveName;
+    return createMoveFromName(moveName);
 }
 
-std::string Human::getName() {
+std::string Human::getName() const {
     return name;
 }
