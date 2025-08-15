@@ -3,6 +3,8 @@
 
 int Reverser::reverseDigit(int value)
 {
+    if (value<0)
+    return -1;
     return reverseDigitHelper(value, 0);
 };
 int Reverser::reverseDigitHelper(int value, int acc)
@@ -14,6 +16,7 @@ int Reverser::reverseDigitHelper(int value, int acc)
 }
 std::string Reverser::reverseString(std::string characters)
 {
+    
     if (characters == "")
         return "";
     return reverseString(characters.substr(1)) + characters[0];
