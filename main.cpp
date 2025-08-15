@@ -10,5 +10,5 @@ int main()
     std::cout << truck.numTrucks(15, 3) << endl;
     Reverser num;
     std::cout << num.reverseDigit(1234) << std::endl;
-    std::cout << num.reverseString("Rafid");
+    std::cout << num.reverseString("RAFID");
 }

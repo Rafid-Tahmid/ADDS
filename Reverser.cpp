@@ -14,10 +14,12 @@ int Reverser::reverseDigitHelper(int value, int acc)
     else
         return reverseDigitHelper(value / 10, acc * 10 + (value % 10));
 }
-std::string Reverser::reverseString(std::string characters)
-{
-    
-    if (characters == "")
-        return "";
+std::string Reverser::reverseString(std::string characters) {
+    if (characters.empty()) 
+        return "ERROR";
+
+    if (characters.size() == 1) 
+        return characters;
+
     return reverseString(characters.substr(1)) + characters[0];
 }
